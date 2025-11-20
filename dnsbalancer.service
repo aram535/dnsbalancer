@@ -1,0 +1,35 @@
+[Unit]
+Description=DNS Load Balancer
+Documentation=https://github.com/yourusername/dnsbalancer
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+
+# Binary location
+ExecStart=/usr/local/bin/dnsbalancer serve --config /etc/dnsbalancer/config.yaml
+
+# Restart policy
+Restart=on-failure
+RestartSec=5s
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/log/dnsbalancer
+
+# Resource limits
+LimitNOFILE=65536
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=dnsbalancer
+
+[Install]
+WantedBy=multi-user.target

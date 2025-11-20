@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  dnsbalancer:
+    build: .
+    image: dnsbalancer:latest
+    container_name: dnsbalancer
+    restart: unless-stopped
+    
+    # Network mode host is required for DNS (UDP port 53)
+    network_mode: host
+    
+    volumes:
+      # Mount config file
+      - ./config.yaml:/etc/dnsbalancer/config.yaml:ro
+      # Mount logs directory
+      - ./logs:/var/log/dnsbalancer
+    
+    # Capabilities needed for port 53
+    cap_add:
+      - NET_BIND_SERVICE
+    
+    # Environment variables (optional overrides)
+    environment:
+      - TZ=America/New_York
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+# Example with custom network (alternative to host mode)
+# Uncomment if you want to use bridge networking with port mapping
+#
+#   dnsbalancer-custom:
+#     build: .
+#     image: dnsbalancer:latest
+#     container_name: dnsbalancer-custom
+#     restart: unless-stopped
+#     
+#     ports:
+#       - "53:53/udp"
+#     
+#     volumes:
+#       - ./config.yaml:/etc/dnsbalancer/config.yaml:ro
+#       - ./logs:/var/log/dnsbalancer
+#     
+#     cap_add:
+#       - NET_BIND_SERVICE
