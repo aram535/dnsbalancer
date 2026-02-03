@@ -7,9 +7,9 @@ import (
 	"syscall"
 
 	"github.com/spf13/cobra"
-	"github.com/yourusername/dnsbalancer/config"
-	"github.com/yourusername/dnsbalancer/lb"
-	"github.com/yourusername/dnsbalancer/logging"
+	"github.com/aram535/dnsbalancer/config"
+	"github.com/aram535/dnsbalancer/lb"
+	"github.com/aram535/dnsbalancer/logging"
 )
 
 var (

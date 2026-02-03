@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/yourusername/dnsbalancer/backend"
-	"github.com/yourusername/dnsbalancer/config"
+	"github.com/aram535/dnsbalancer/backend"
+	"github.com/aram535/dnsbalancer/config"
 )
 
 // HealthChecker performs periodic health checks on backends

@@ -1,4 +1,4 @@
-module github.com/yourusername/dnsbalancer
+module github.com/aram535/dnsbalancer
 
 go 1.21
 

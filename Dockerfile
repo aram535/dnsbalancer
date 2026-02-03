@@ -20,9 +20,9 @@ ARG GIT_COMMIT=unknown
 ARG BUILD_DATE=unknown
 
 RUN CGO_ENABLED=0 GOOS=linux go build \
-    -ldflags "-X github.com/yourusername/dnsbalancer/cmd.Version=${VERSION} \
-              -X github.com/yourusername/dnsbalancer/cmd.GitCommit=${GIT_COMMIT} \
-              -X github.com/yourusername/dnsbalancer/cmd.BuildDate=${BUILD_DATE}" \
+    -ldflags "-X github.com/aram535/dnsbalancer/cmd.Version=${VERSION} \
+              -X github.com/aram535/dnsbalancer/cmd.GitCommit=${GIT_COMMIT} \
+              -X github.com/aram535/dnsbalancer/cmd.BuildDate=${BUILD_DATE}" \
     -o dnsbalancer .
 
 # Final stage

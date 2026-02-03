@@ -5,9 +5,9 @@ BINARY_NAME=dnsbalancer
 VERSION?=1.0.0
 GIT_COMMIT=$(shell git rev-parse HEAD 2>/dev/null || echo "unknown")
 BUILD_DATE=$(shell date -u +%Y-%m-%dT%H:%M:%SZ)
-LDFLAGS=-ldflags "-X github.com/yourusername/dnsbalancer/cmd.Version=$(VERSION) \
-                   -X github.com/yourusername/dnsbalancer/cmd.GitCommit=$(GIT_COMMIT) \
-                   -X github.com/yourusername/dnsbalancer/cmd.BuildDate=$(BUILD_DATE)"
+LDFLAGS=-ldflags "-X github.com/aram535/dnsbalancer/cmd.Version=$(VERSION) \
+                   -X github.com/aram535/dnsbalancer/cmd.GitCommit=$(GIT_COMMIT) \
+                   -X github.com/aram535/dnsbalancer/cmd.BuildDate=$(BUILD_DATE)"
 
 ## help: Display this help message
 help:

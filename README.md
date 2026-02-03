@@ -18,7 +18,7 @@ A lightweight, high-performance UDP DNS load balancer written in Go. Perfect for
 ### From Source
 
 ```bash
-git clone https://github.com/yourusername/dnsbalancer.git
+git clone https://github.com/aram535/dnsbalancer.git
 cd dnsbalancer
 go build -o dnsbalancer
 sudo mv dnsbalancer /usr/local/bin/
@@ -27,9 +27,9 @@ sudo mv dnsbalancer /usr/local/bin/
 ### Build with Version Info
 
 ```bash
-go build -ldflags "-X github.com/yourusername/dnsbalancer/cmd.Version=1.0.0 \
-                    -X github.com/yourusername/dnsbalancer/cmd.GitCommit=$(git rev-parse HEAD) \
-                    -X github.com/yourusername/dnsbalancer/cmd.BuildDate=$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+go build -ldflags "-X github.com/aram535/dnsbalancer/cmd.Version=1.0.0 \
+                    -X github.com/aram535/dnsbalancer/cmd.GitCommit=$(git rev-parse HEAD) \
+                    -X github.com/aram535/dnsbalancer/cmd.BuildDate=$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
          -o dnsbalancer
 ```
 

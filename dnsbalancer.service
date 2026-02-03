@@ -1,6 +1,6 @@
 [Unit]
 Description=DNS Load Balancer
-Documentation=https://github.com/yourusername/dnsbalancer
+Documentation=https://github.com/aram535/dnsbalancer
 After=network-online.target
 Wants=network-online.target
 

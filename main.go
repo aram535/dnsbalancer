@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/yourusername/dnsbalancer/cmd"
+	"github.com/aram535/dnsbalancer/cmd"
 )
 
 func main() {

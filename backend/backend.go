@@ -83,7 +83,6 @@ func (b *Backend) RecordHealthCheck(success bool, failThreshold, successThreshol
 	defer b.mu.Unlock()
 
 	b.LastCheck = time.Now()
-	oldHealth := b.Healthy
 
 	if success {
 		b.ConsecutiveSuccess++

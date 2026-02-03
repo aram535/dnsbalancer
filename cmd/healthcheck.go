@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	"github.com/yourusername/dnsbalancer/backend"
-	"github.com/yourusername/dnsbalancer/config"
+	"github.com/aram535/dnsbalancer/backend"
+	"github.com/aram535/dnsbalancer/config"
 )
 
 var (

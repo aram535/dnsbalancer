@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/yourusername/dnsbalancer/config"
+	"github.com/aram535/dnsbalancer/config"
 )
 
 // validateCmd represents the validate command

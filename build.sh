@@ -15,9 +15,9 @@ GIT_COMMIT=$(git rev-parse HEAD 2>/dev/null || echo "unknown")
 BUILD_DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 
 # Build flags
-LDFLAGS="-X github.com/yourusername/dnsbalancer/cmd.Version=${VERSION} \
-         -X github.com/yourusername/dnsbalancer/cmd.GitCommit=${GIT_COMMIT} \
-         -X github.com/yourusername/dnsbalancer/cmd.BuildDate=${BUILD_DATE}"
+LDFLAGS="-X github.com/aram535/dnsbalancer/cmd.Version=${VERSION} \
+         -X github.com/aram535/dnsbalancer/cmd.GitCommit=${GIT_COMMIT} \
+         -X github.com/aram535/dnsbalancer/cmd.BuildDate=${BUILD_DATE}"
 
 # Tidy dependencies
 echo "Downloading dependencies..."

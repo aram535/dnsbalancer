@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 
 	"github.com/sirupsen/logrus"
-	"github.com/yourusername/dnsbalancer/config"
+	"github.com/aram535/dnsbalancer/config"
 )
 
 // SetupLogger initializes and configures the application logger
